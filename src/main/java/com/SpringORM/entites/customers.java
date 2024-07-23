@@ -1,11 +1,22 @@
 package com.SpringORM.entites;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Customer_Detail")
 public class customers {
 
+	@Id
+	@Column(name ="custID")
 	private int customerID;
 	
+	@Column(name ="custName")
 	private String customerName;
 	
+	@Column(name ="custAddr")
 	private String customerAddress;
 
 	public int getCustomerID() {
